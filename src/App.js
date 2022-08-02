@@ -8,18 +8,41 @@ import Counter from './components/Counter';
 function App() {
   const genres = ['Rock, ', 'Rap, ', 'Electronic, ', 'Alternative '];
   const [count, setCount] = useState(0);
-  const [like, setLike] = useState(true);
-  const likeMe = () => {
-    setLike(!like);
-  };
-  const disLikeMe = () => {
-    setLike(!like);
-  };
+  // const [like, setLike] = useState(true);
+  const songs = [
+    {
+      id: 1,
+      title: 'Faint',
+      imageUrl: require('./images/faint.jpg'),
+      like: false,
+    },
+    {
+      id: 2,
+      title: 'New Divide',
+      imageUrl: require('./images/newDivide.jpg'),
+      like: false,
+    },
+    {
+      id: 3,
+      title: 'Numb',
+      imageUrl: require('./images/numb.jpg'),
+      like: false,
+    },
+    {
+      id: 4,
+      title: "What I've done",
+      imageUrl: require('./images/WhatIveDone.jpg'),
+      like: false,
+    },
+  ];
+
   return (
     <div className="App">
       <Artist genres={genres}></Artist>
-      <Song likeMe={likeMe} disLikeMe={disLikeMe} like={like}></Song>
       <Counter></Counter>
+      {songs.map((song) => (
+        <Song key={song.id} song={song} />
+      ))}
     </div>
   );
 }
