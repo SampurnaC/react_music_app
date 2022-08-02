@@ -4,9 +4,11 @@ import Artist from './components/Artist';
 import Song from './components/Song';
 
 function App() {
+  const genres = ['Rock, ', 'Rap, ', 'Electronic, ', 'Alternative '];
+
   return (
     <div className="App">
-      <Artist></Artist>
+      <Artist genres={genres}></Artist>
       <Song></Song>
     </div>
   );
