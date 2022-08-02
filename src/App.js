@@ -7,10 +7,17 @@ import Counter from './components/Counter';
 function App() {
   const genres = ['Rock, ', 'Rap, ', 'Electronic, ', 'Alternative '];
   const [count, setCount] = useState(0);
+  const [like, setLike] = useState(true);
+  const likeMe = () => {
+    setLike(!like);
+  };
+  const disLikeMe = () => {
+    setLike(!like);
+  };
   return (
     <div className="App">
       <Artist genres={genres}></Artist>
-      <Song></Song>
+      <Song likeMe={likeMe} disLikeMe={disLikeMe} like={like}></Song>
       <Counter></Counter>
     </div>
   );
