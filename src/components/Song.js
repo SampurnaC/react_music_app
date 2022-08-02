@@ -1,32 +1,27 @@
 import React, { useState } from 'react';
-import faint from '../images/faint.jpg';
-import newDivide from '../images/newDivide.jpg';
-import numb from '../images/numb.jpg';
-import whatIveDone from '../images/WhatIveDone.jpg';
 
 const Song = () => {
   const [like, setLike] = useState(true);
+  const songs = [
+    { title: 'Faint', imageUrl: require('../images/faint.jpg') },
+    { title: 'New Divide', imageUrl: require('../images/newDivide.jpg') },
+    { title: 'Numb', imageUrl: require('../images/numb.jpg') },
+    { title: "What I've done", imageUrl: require('../images/WhatIveDone.jpg') },
+  ];
   return (
     <div className="song_container">
-      <div className="song_1">
-        <img src={faint} alt="Faint Song Cover Art" />
-        <h3>Faint</h3>
-        {like === true && <button onClick={() => setLike(false)}>Like</button>}
+      <div className="song">
+        {songs.map((song) => (
+          <div key={song.title}>
+            <h1>{song.title}</h1>
+            <img src={song.imageUrl} alt="" />
+          </div>
+        ))}
+
+        {/* {like === true && <button onClick={() => setLike(false)}>Like</button>}
         {like === false && (
           <button onClick={() => setLike(true)}>Dislike</button>
-        )}
-      </div>
-      <div className="song_2">
-        <img src={newDivide} alt="New Divide Song Cover Art" />
-        <h3>New Divide</h3>
-      </div>
-      <div className="song_3">
-        <img src={numb} alt="Numb Song Cover Art" />
-        <h3>Numb</h3>
-      </div>
-      <div className="song_4">
-        <img src={whatIveDone} alt="What I've Done Song Cover Art" />
-        <h3>What I've Done</h3>
+        )} */}
       </div>
     </div>
   );
