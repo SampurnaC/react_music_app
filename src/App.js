@@ -38,7 +38,6 @@ function App() {
   return (
     <div className="App">
       <Artist genres={genres}></Artist>
-      <Counter></Counter>
       {songs.map((song) => (
         <Song key={song.id} song={song} />
       ))}
