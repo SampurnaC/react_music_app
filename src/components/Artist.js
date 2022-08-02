@@ -7,8 +7,10 @@ const Artist = ({ genres }) => {
     alert(`${name}`);
   };
   return (
-    <div className="artist_container">
+    <div>
+    <div className="artist">
       <h1>Linkin Park</h1>
+      </div>
       {genres.map((genre) => genre)}
       <p>
         Linkin Park is an American rock band from California. The band's current

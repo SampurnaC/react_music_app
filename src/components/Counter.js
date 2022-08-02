@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const Counter = ({count}) => {
-  return(
-    <div className='counter'>Current count: {count}</div>
-  )
-}
-
-export default Counter;
-=======
 import React, { useState } from 'react';
 
 const Counter = () => {
@@ -32,4 +21,3 @@ const Counter = () => {
 };
 
 export default Counter;
->>>>>>> eceae42597761f0e5bdc241a891d11b74f44731a

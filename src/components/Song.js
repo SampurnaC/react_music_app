@@ -9,7 +9,7 @@ const Song = () => {
     { title: "What I've done", imageUrl: require('../images/WhatIveDone.jpg') },
   ];
   return (
-    <div className="song_container">
+    <div>
       <div className="song">
         {songs.map((song) => (
           <div key={song.title}>
@@ -17,11 +17,6 @@ const Song = () => {
             <img src={song.imageUrl} alt="" />
           </div>
         ))}
-
-        {/* {like === true && <button onClick={() => setLike(false)}>Like</button>}
-        {like === false && (
-          <button onClick={() => setLike(true)}>Dislike</button>
-        )} */}
       </div>
     </div>
   );
