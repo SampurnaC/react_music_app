@@ -9,10 +9,7 @@ const Artist = ({ genres }) => {
   return (
     <div className="artist_container">
       <h1>Linkin Park</h1>
-<<<<<<< HEAD
-=======
       {genres.map((genre) => genre)}
->>>>>>> f91b8156752190108ce8da4f02e28acfa16c1fff
       <p>
         Linkin Park is an American rock band from California. The band's current
         lineup cromprises of vocalist/rhythm guitarist/keyboardist Mike Shinoda,
