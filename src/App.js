@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Artist from './components/Artist';
 import Song from './components/Song';

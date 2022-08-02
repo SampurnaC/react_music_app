@@ -9,7 +9,7 @@ const Song = ({ song }) => {
     setLike(!like);
   };
   return (
-    <div className="song_container">
+    <div>
       <div className="song">
         {like === false && <button onClick={likeMe}>Like</button>}
         {like === true && <button onClick={disLikeMe}>Dislike</button>}
